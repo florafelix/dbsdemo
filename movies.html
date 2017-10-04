@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Movies</title>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+</head>
+
+<body>
+<p id="message"></p>
+<table class="table">
+<thead></thead>
+<tbody  id="moviePanel"></tbody>
+
+</table>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script>
+$(function() {
+
+  var url = "https://dbsdemo001.herokuapp.com/moviesapi.php";
+ 
+$('#message').html("Jquery is loaded with real movie data - version 3 - daniel");
+  
+  $.getJSON(url, function (jsonData) {
+  
+    for(var i = 0; i < jsonData.length; i++) {
+     
+        var html ="<tr>";
+      
+            html+= "<td>";
+            html+= jsonData[i].director;
+            html+= "</td>";
+      
+            html+= "<td>";
+            html+= jsonData[i].title;
+            html+= "</td>";
+      
+            html+= "<td>";
+            html+= jsonData[i].rating;
+            html+= "</td>";
+      
+            html+= "</tr>";
+        $('#moviePanel').append(html);
+      
+    }
+    
+  });
+
+})
+</script>
+
+</body>
+
+</html>
