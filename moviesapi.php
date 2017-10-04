@@ -2,7 +2,7 @@
 
 class Movie {
 
-publix $director;
+public $director;
 public $title;
 public $rating;
 
