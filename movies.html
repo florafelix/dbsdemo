@@ -41,6 +41,10 @@ $('#message').html("Jquery is loaded with real movie data - version 3");
             html+= jsonData[i].rating;
             html+= "</td>";
       
+            html+= "<td>";
+            html+= jsonData[i].runningtime;
+            html+= "</td>";
+      
             html+= "</tr>";
         $('#moviePanel').append(html);
       
