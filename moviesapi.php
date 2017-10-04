@@ -3,6 +3,7 @@
     public $director;
     public $title;
     public $rating;
+    public $runningtime;
   }
 /* Declare your variables */  
     $movies = array();  
@@ -11,6 +12,7 @@
     $movie->director = "Batman";
     $movie->title="Christoper Nolan";
     $movie->rating="18";
+    $movie->runningtime=120;
 
     $movies[]=$movie;
 
@@ -19,7 +21,7 @@
     $movie->director = "Spiderman";
     $movie->title="Sam Raimi";
     $movie->rating="15";
-
+    $movie->runningtime=110;
     $movies[]=$movie;
 
 //Add a Movie 
@@ -30,6 +32,7 @@
         $movie->director = "Director $i";
         $movie->title="Title $i";
         $movie->rating="PG $i";
+        $movie->runningtime=100+$i;
         $movies[]=$movie;
     }  
   
