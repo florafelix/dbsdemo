@@ -10,7 +10,7 @@
     
     /* Set the header type for output */
      
-     hearder('Content-Type: application/json');
+     header('Content-Type: application/json');
       
   /* Create a variable to hold your JSON data */ 
   
